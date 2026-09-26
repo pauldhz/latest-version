@@ -1,0 +1,20 @@
+[project]
+name = "latest-cli"
+version = "0.1.0"
+description = "CLI pour connaître la dernière version stable de Java, Gradle, Maven, Node, npm, pip, Spring..."
+requires-python = ">=3.10"
+dependencies = [
+    "requests==2.32.3",
+]
+
+[project.scripts]
+latest = "main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main"]
+packages = ["providers"]
+
